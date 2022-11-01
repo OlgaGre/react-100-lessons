@@ -1,15 +1,15 @@
 //import logo from './logo.svg';
 import "./App.css";
 import Header from "./components/Heder";
-import Main from "./components/Main";
+import ProfileComp from "./components/ProfileComp";
 import Nav from "./components/Nav";
 
 const App = () => {
   return (
     <div className="app-wrapper">
-      <Header/>
+      <Header />
       <Nav />
-   <Main />
+      <ProfileComp />
     </div>
   );
 };
