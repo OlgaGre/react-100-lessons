@@ -12,5 +12,11 @@
   background-color: red;
 }
 .avatar{
+ width: 50px;
+}
+.personInformation{
   background-color: aqua;
+}
+.posts{
+  background-color: gold;
 }
