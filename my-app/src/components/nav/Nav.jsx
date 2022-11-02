@@ -3,13 +3,13 @@ const Nav = () =>{
   return (
     <nav className={classes.nav}>
         <div className='item'>
-          <a href='#'>Profile</a>
+          <a href='/profile'>Profile</a>
         </div>
         <div className='item'>
-          <a href='#'>Messages</a>
+          <a href='/messagers'>Messages</a>
         </div>
         <div>
-          <a href='#'>News</a>
+          <a href='/news'>News</a>
         </div>
         <div>
           <a href='#'>Music</a>

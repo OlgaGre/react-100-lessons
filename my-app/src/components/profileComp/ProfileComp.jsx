@@ -1,6 +1,8 @@
 import classes from "./ProfileComp.module.css";
 import MyPosts from "./MyPosts/MyPosts";
 import PersonInformation from "./PersonInformation/PersonInformation";
+
+
 const ProfileComp = () => {
   return (
     <main className={classes.main}>
