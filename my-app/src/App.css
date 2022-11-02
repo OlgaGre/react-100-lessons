@@ -1,3 +1,6 @@
+
+
+
 .app-wrapper{
   width: 1200px;
   margin: 0 auto;
@@ -9,16 +12,4 @@ grid-template-areas:
 'n m';
 grid-gap: 10px;
 }
-.header{
-  grid-area: h;
-}
-.header img{
-  width: 20px;
-  height: 20px;
-}
-.nav{
-  grid-area: n;
-}
-.main{
-  grid-area: m;
-}
+

@@ -1,11 +1,11 @@
-
+import classes from './Nav.module.css'
 const Nav = () =>{
   return (
-    <nav className="nav">
-        <div>
+    <nav className={classes.nav}>
+        <div className='item'>
           <a>Profile</a>
         </div>
-        <div>
+        <div className='item'>
           <a>Messages</a>
         </div>
         <div>
