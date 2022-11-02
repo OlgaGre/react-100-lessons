@@ -12,10 +12,10 @@ const Nav = () =>{
           <a href='/news'>News</a>
         </div>
         <div>
-          <a href='#'>Music</a>
+          <a href='/music'>Music</a>
         </div>
         <div>
-          <a href='#'>Settings</a>
+          <a href='settings'>Settings</a>
         </div>
       </nav>
   )

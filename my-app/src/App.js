@@ -1,21 +1,25 @@
-//import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/header/Heder";
- import ProfileComp from "./components/profileComp/ProfileComp";
-import Dialogs from "./components/Dialogs/Dialogs";
+import ProfileComp from "./components/main/profileComp/ProfileComp";
+import Dialogs from "./components/main/dialogs/Dialogs";
 import Nav from "./components/nav/Nav";
 
 const App = () => {
   return (
-    <div className="appWrapper">
-      <Header />
-      <Nav />
-      {/* <ProfileComp /> */}
-      <div className="appWrapperContent">
-        <Dialogs />
-        {/* <ProfileComp /> */}
+    <BrowserRouter>
+      <div className="appWrapper">
+        <Header />
+        <Nav />
+
+        <div className="appWrapperContent">
+          <Routes>
+            <Route path="/profile" element={<ProfileComp/>} />
+            <Route path="/messagers" element={<Dialogs />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 };
 
