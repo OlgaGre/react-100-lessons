@@ -1,12 +1,9 @@
-import classes from './Post.module.css'
+import classes from "./Post.module.css";
 
-const Post = () =>{
-  return(
- 
-    <div className={classes.item}>descr</div>
-   
+const Post = (props) => {
+  return <div className={classes.item}>
+    {props.message}
+  </div>;
+};
 
-  )
-}
-
-export default Post
+export default Post;
