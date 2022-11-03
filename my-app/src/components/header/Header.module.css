@@ -1,8 +1,16 @@
 .header{
-  background-color: blueviolet;
+  background-color: #e0e0e0;
   grid-area: h;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+ 
 }
 .header img{
-  width: 20px;
-  height: 20px;
+  width: 60px;
+  height: 60px;
+
+}
+h1{
+  color: black;
 }

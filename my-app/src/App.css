@@ -11,9 +11,10 @@ grid-template-areas:
 'h h'
 'n m';
 grid-gap: 10px;
+background-color: antiquewhite;
 }
 .appWrapperContent{
-  background-color: yellow;
+  background-color: #aaaaec;
   grid-area: m;
 }
 
