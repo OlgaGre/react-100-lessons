@@ -1,12 +1,12 @@
-import classes from './Dialogs.module.css'
-import Interlocutors from './interlocutors/Interlocutors'
-import Messagers from './messagers/Messagers'
+import classes from "./Dialogs.module.css";
+import Interlocutors from "./interlocutors/Interlocutors";
+import Messagers from "./messagers/Messagers";
 const Dialogs = (props) => {
-  return(
+  return (
     <div className={classes.main}>
       <Interlocutors />
-    <Messagers />
+      <Messagers />
     </div>
-  )
-}
-export default Dialogs
+  );
+};
+export default Dialogs;
