@@ -1,10 +1,9 @@
 import classes from './Messagers.module.css'
 
 const Messagers = (props) => {
+  let messegers = props.mess.map(el => <div> {el.mess}  </div>)
   return(
-    <div>
-     Messagers
-    </div>
+   messegers
   )
 }
 export default Messagers

@@ -1,13 +1,10 @@
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
-let postsContent = [
-  { message: "1 post", likes: 2 },
-  { message: "1 post", likes: 3 },
-];
-let postsItems = postsContent.map((obj) => <Post message={obj.message}  likes = {obj.likes} />);
+// import postsItems from'./../../../../index' 
 
-const MyPosts = () => {
 
+const MyPosts = (props) => {
+  let postsItems = props.posts.map((obj) => <Post message={obj.message}  likes = {obj.likes} />);
   return (
     <div className={classes.myPosts}>
       <div className="newPost">

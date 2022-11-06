@@ -3,12 +3,12 @@ import MyPosts from "./MyPosts/MyPosts";
 import PersonInformation from "./PersonInformation/PersonInformation";
 
 
-const ProfileComp = () => {
+const ProfileComp = (props) => {
   return (
     <main className={classes.main}>
    <div className={classes.headerImg}></div>
      <PersonInformation name='Olga'/>
-   <MyPosts />
+   <MyPosts posts ={props.posts}/>
       main check
     </main>
   );
