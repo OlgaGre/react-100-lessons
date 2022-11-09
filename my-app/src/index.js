@@ -4,24 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // postsContentArr// import Post from './components/main/profileComp/MyPosts/Post/Post';
+import state from "./redux/state";
 
-let postsContentArr = [
-  { message: "1 post", likes: 2 },
-  { message: "2 post", likes: 3 },
-];
-let interlocutorsArr = [
-  { id: 1, name: "sasha" },
-  { id: 2, name: "olga" },
-];
-let messagersArr = [
-  {mess: ' hi'},
-  {mess: 'bay'}
-]
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App posts={postsContentArr} interlocutorsArr={interlocutorsArr} messagersArr={messagersArr}/>
+    <App state= {state}/>
   </React.StrictMode>
 );
 

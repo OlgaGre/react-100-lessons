@@ -3,7 +3,8 @@ import {NavLink} from 'react-router-dom'
 const Interlocutor = (props) => {
   return(
     <div className={classes.item}>
-   <NavLink to={`/messagers/${props.id}` }>  {props.name}</NavLink> 
+      <img src={props.avatar} className={classes.avatar} alt="" />
+   <NavLink to={`/messagers/${props.id}` }> {props.name}</NavLink> 
     </div>
   )
 }

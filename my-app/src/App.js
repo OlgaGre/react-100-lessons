@@ -19,14 +19,15 @@ const App = (props) => {
           <Routes>
             <Route
               path="/profile"
-              element={<ProfileComp posts={props.posts} />}
+              element={<ProfileComp posts={props.state.profilePage.postsContentArr} />}
             />
             <Route
               path="/messagers/*"
               element={
                 <Dialogs
-                  interlocutorsArr={props.interlocutorsArr}
-                  messagersArr={props.messagersArr}
+                  interlocutorsArr={props.state.dialogsPage.interlocutorsArr}
+                  messagersArr={props.state.dialogsPage.messagersArr}
+                  
                 />
               }
             />
