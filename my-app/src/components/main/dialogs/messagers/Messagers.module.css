@@ -14,3 +14,7 @@
   width: 50%;
   border-radius: 20px;
 }
+.textAreaAndBtn{
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+}

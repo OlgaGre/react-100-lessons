@@ -1,8 +1,8 @@
 let state = {
   profilePage: {
     postsContentArr: [
-      { message: "1 post", likes: 2 },
-      { message: "2 post", likes: 3 },
+      { content: "1 post", likes: 2 },
+      { content: "2 post", likes: 3 },
     ],
   },
   dialogsPage: {
@@ -31,4 +31,10 @@ let state = {
   },
 };
 
+export let addNewPost = (newPostText)=>{
+let newPostObj = {
+  content: newPostText,
+  likes:0,
+}
+}
 export default state;
