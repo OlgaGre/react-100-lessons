@@ -19,7 +19,8 @@ const App = (props) => {
           <Routes>
             <Route
               path="/profile"
-              element={<ProfileComp posts={props.state.profilePage.postsContentArr} />}
+              element={<ProfileComp posts={props.state.profilePage.postsContentArr}
+              addNewPost={props.addNewPost} />}
             />
             <Route
               path="/messagers/*"

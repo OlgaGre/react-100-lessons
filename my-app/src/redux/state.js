@@ -36,5 +36,6 @@ let newPostObj = {
   content: newPostText,
   likes:0,
 }
+state.profilePage.postsContentArr.push(newPostObj)
 }
 export default state;
