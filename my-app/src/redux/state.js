@@ -1,3 +1,5 @@
+import { renderTree } from "../render";
+
 let state = {
   profilePage: {
     postsContentArr: [
@@ -37,5 +39,7 @@ let newPostObj = {
   likes:0,
 }
 state.profilePage.postsContentArr.push(newPostObj)
+renderTree(state)
+
 }
 export default state;
