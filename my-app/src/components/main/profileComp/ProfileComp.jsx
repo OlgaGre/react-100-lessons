@@ -7,7 +7,12 @@ const ProfileComp = (props) => {
     <main className={classes.main}>
       <div className={classes.headerImg}></div>
       <PersonInformation name="Olga" />
-      <MyPosts posts={props.posts} addNewPost={props.addNewPost} />
+      <MyPosts
+        posts={props.posts}
+        textInTextArea={props.textInTextArea}
+        addNewPost={props.addNewPost}
+        changeTextInTextAreaInNewPost={props.changeTextInTextAreaInNewPost}
+      />
     </main>
   );
 };

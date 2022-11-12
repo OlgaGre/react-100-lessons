@@ -5,8 +5,14 @@ const Dialogs = (props) => {
   debugger;
   return (
     <div className={classes.main}>
-      <Interlocutors interlocutorsArr={props.interlocutorsArr}/>
-      <Messagers className={classes.messegers} mess={props.messagersArr}/>
+      <Interlocutors interlocutorsArr={props.interlocutorsArr} />
+      <Messagers
+        className={classes.messegers}
+        mess={props.messagersArr}
+        messageInTextArea={props.messageInTextArea}
+        addNewMessagerInArr={props.addNewMessagerInArr}
+        changeTextInTextAreaInMessage={props.changeTextInTextAreaInMessage}
+      />
     </div>
   );
 };

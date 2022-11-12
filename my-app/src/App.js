@@ -8,6 +8,7 @@ import News from "./components/main/news/News";
 import Music from "./components/main/music/Music";
 import Settings from "./components/main/settings/Settings";
 
+
 const App = (props) => {
   return (
     <BrowserRouter>
@@ -20,7 +21,9 @@ const App = (props) => {
             <Route
               path="/profile"
               element={<ProfileComp posts={props.state.profilePage.postsContentArr}
-              addNewPost={props.addNewPost} />}
+              textInTextArea={props.state.profilePage.textInTextArea}
+              addNewPost={props.addNewPost}
+              changeTextInTextAreaInNewPost={props.changeTextInTextAreaInNewPost} />}
             />
             <Route
               path="/messagers/*"
@@ -28,7 +31,9 @@ const App = (props) => {
                 <Dialogs
                   interlocutorsArr={props.state.dialogsPage.interlocutorsArr}
                   messagersArr={props.state.dialogsPage.messagersArr}
-                  
+                  messageInTextArea={props.state.dialogsPage.messageInTextArea}
+                  addNewMessagerInArr={props.addNewMessagerInArr}
+                  changeTextInTextAreaInMessage={props.changeTextInTextAreaInMessage}
                 />
               }
             />
