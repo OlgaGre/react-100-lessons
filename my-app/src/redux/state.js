@@ -1,4 +1,4 @@
-import { renderTree } from "../render";
+let renderTree=()=>{}
 
 let state = {
   profilePage: {
@@ -37,7 +37,7 @@ let state = {
   },
 };
 
-export let addNewPost = () => {
+export const addNewPost = () => {
   let newPostObj = {
     content: state.profilePage.textInTextArea,
     likes: 0,
@@ -46,20 +46,23 @@ export let addNewPost = () => {
   state.profilePage.textInTextArea = "";
   renderTree(state);
 };
-export let changeTextInTextAreaInNewPost = (newTextInTextArea) => {
+export const changeTextInTextAreaInNewPost = (newTextInTextArea) => {
   state.profilePage.textInTextArea = newTextInTextArea;
 
   renderTree(state);
 };
 
-export let addNewMessagerInArr = () => {
+export const addNewMessagerInArr = () => {
   let newObj = { mess: state.dialogsPage.messageInTextArea, sender: true };
   state.dialogsPage.messagersArr.push(newObj);
   state.dialogsPage.messageInTextArea = '';
   renderTree(state);
 };
-export let changeTextInTextAreaInMessage = (text) => {
+export const changeTextInTextAreaInMessage = (text) => {
   state.dialogsPage.messageInTextArea = text;
   renderTree(state);
 };
 export default state;
+export const subscribe = (observer) =>{
+  renderTree = observer
+}
