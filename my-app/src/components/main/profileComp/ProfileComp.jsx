@@ -10,8 +10,7 @@ const ProfileComp = (props) => {
       <MyPosts
         posts={props.posts}
         textInTextArea={props.textInTextArea}
-        addNewPost={props.addNewPost}
-        changeTextInTextAreaInNewPost={props.changeTextInTextAreaInNewPost}
+        dispatch={props.dispatch}
       />
     </main>
   );

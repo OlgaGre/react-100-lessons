@@ -22,8 +22,7 @@ const App = (props) => {
               path="/profile"
               element={<ProfileComp posts={props.state.profilePage.postsContentArr}
               textInTextArea={props.state.profilePage.textInTextArea}
-              addNewPost={props.addNewPost}
-              changeTextInTextAreaInNewPost={props.changeTextInTextAreaInNewPost} />}
+              dispatch={props.dispatch} />}
             />
             <Route
               path="/messagers/*"
@@ -32,8 +31,7 @@ const App = (props) => {
                   interlocutorsArr={props.state.dialogsPage.interlocutorsArr}
                   messagersArr={props.state.dialogsPage.messagersArr}
                   messageInTextArea={props.state.dialogsPage.messageInTextArea}
-                  addNewMessagerInArr={props.addNewMessagerInArr}
-                  changeTextInTextAreaInMessage={props.changeTextInTextAreaInMessage}
+                  dispatch={props.dispatch}
                 />
               }
             />

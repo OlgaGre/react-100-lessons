@@ -10,9 +10,7 @@ const Dialogs = (props) => {
         className={classes.messegers}
         mess={props.messagersArr}
         messageInTextArea={props.messageInTextArea}
-        addNewMessagerInArr={props.addNewMessagerInArr}
-        changeTextInTextAreaInMessage={props.changeTextInTextAreaInMessage}
-      />
+        dispatch={props.dispatch}/>
     </div>
   );
 };

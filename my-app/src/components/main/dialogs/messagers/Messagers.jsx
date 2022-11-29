@@ -11,11 +11,11 @@ const Messagers = (props) => {
 
   let newMessEl = React.createRef();
   let addNewMess = () => {
-    props.addNewMessagerInArr();
+    props.dispatch({type:'ADD-NEW-MESS-IN-ARR'});
   };
   let changeTextArea = () => {
     let text = newMessEl.current.value;
-    props.changeTextInTextAreaInMessage(text)
+    props.dispatch({type:"CHANGE-TEXT-IN-TEXTAREA-IN-MESS", text:text})
   };
 
   return (

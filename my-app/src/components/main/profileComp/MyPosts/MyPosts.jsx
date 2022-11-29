@@ -10,11 +10,11 @@ const MyPosts = (props) => {
 
   let newPostEl = React.createRef();
   let addPost = () => {
-    props.addNewPost();
+    props.dispatch({ type: "ADD-NEW-POST" });
   };
   let changeTextInState = () => {
     let text = newPostEl.current.value;
-    props.changeTextInTextAreaInNewPost(text);
+    props.dispatch({type: "CHANGE-TEXT-IN-TEXTAREA-IN-NEW-POST", newTextInTextArea: text});
   };
   return (
     <div className={classes.myPosts}>
