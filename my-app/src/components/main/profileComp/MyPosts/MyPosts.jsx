@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
 // import postsItems from'./../../../../index'
-
+import { addNewPostActionCreator,changeTextInTexareaInNewPostActionCreator } from "../../../../redux/state";
 const MyPosts = (props) => {
   let postsItems = props.posts.map((obj) => (
     <Post content={obj.content} likes={obj.likes} />
@@ -10,11 +10,11 @@ const MyPosts = (props) => {
 
   let newPostEl = React.createRef();
   let addPost = () => {
-    props.dispatch({ type: "ADD-NEW-POST" });
+    props.dispatch(addNewPostActionCreator());
   };
   let changeTextInState = () => {
     let text = newPostEl.current.value;
-    props.dispatch({type: "CHANGE-TEXT-IN-TEXTAREA-IN-NEW-POST", newTextInTextArea: text});
+    props.dispatch(changeTextInTexareaInNewPostActionCreator(text));
   };
   return (
     <div className={classes.myPosts}>

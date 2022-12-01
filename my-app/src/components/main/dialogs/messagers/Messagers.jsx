@@ -1,4 +1,5 @@
 import React from "react";
+import { addNewMessActionCreator, changeTextInTextareaInMessActionCreator } from "../../../../redux/state";
 import classes from "./Messagers.module.css";
 
 const Messagers = (props) => {
@@ -11,11 +12,11 @@ const Messagers = (props) => {
 
   let newMessEl = React.createRef();
   let addNewMess = () => {
-    props.dispatch({type:'ADD-NEW-MESS-IN-ARR'});
+    props.dispatch(addNewMessActionCreator());
   };
   let changeTextArea = () => {
     let text = newMessEl.current.value;
-    props.dispatch({type:"CHANGE-TEXT-IN-TEXTAREA-IN-MESS", text:text})
+    props.dispatch(changeTextInTextareaInMessActionCreator(text))
   };
 
   return (
