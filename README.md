@@ -1,2 +1,2 @@
 # react-100-lessons
-https://olgagre.github.io/profile
+https://olgagre.github.io/react-100-lessons/
