@@ -10,12 +10,12 @@ const Messagers = (props) => {
     </div>
   ));
 
-  let newMessEl = React.createRef();
+  // let newMessEl = React.createRef();
   let addNewMess = () => {
     props.dispatch(addNewMessActionCreator());
   };
-  let changeTextArea = () => {
-    let text = newMessEl.current.value;
+  let changeTextArea = (event) => {
+    let text = event.target.value;
     props.dispatch(changeTextInTextareaInMessActionCreator(text))
   };
 
@@ -25,7 +25,7 @@ const Messagers = (props) => {
       <div className={classes.textAreaAndBtn}>
         <textarea
           className={classes.textArea}
-          ref={newMessEl}
+          // ref={newMessEl}
           value={props.messageInTextArea}
           onChange={changeTextArea}
         ></textarea>

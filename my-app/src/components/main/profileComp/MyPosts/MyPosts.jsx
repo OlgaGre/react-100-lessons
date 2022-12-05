@@ -8,12 +8,12 @@ const MyPosts = (props) => {
     <Post content={obj.content} likes={obj.likes} />
   ));
 
-  let newPostEl = React.createRef();
+  // let newPostEl = React.createRef();
   let addPost = () => {
     props.dispatch(addNewPostActionCreator());
   };
-  let changeTextInState = () => {
-    let text = newPostEl.current.value;
+  let changeTextInState = (event) => {
+    let text = event.target.value;
     props.dispatch(changeTextInTexareaInNewPostActionCreator(text));
   };
   return (
@@ -25,7 +25,7 @@ const MyPosts = (props) => {
           id=""
           cols="30"
           rows="3"
-          ref={newPostEl}
+          // ref={newPostEl}
           onChange={changeTextInState}
         ></textarea>
         <button onClick={addPost}>add</button>
