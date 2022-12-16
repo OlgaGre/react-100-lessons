@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
 // import postsItems from'./../../../../index'
-import { addNewPostActionCreator,changeTextInTexareaInNewPostActionCreator } from "../../../../redux/state";
+import { addNewPostActionCreator,changeTextInTexareaInNewPostActionCreator } from "../../../../redux/profileReducer";
 const MyPosts = (props) => {
   let postsItems = props.posts.map((obj) => (
     <Post content={obj.content} likes={obj.likes} />

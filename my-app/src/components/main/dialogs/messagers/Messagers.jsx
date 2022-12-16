@@ -1,5 +1,5 @@
 import React from "react";
-import { addNewMessActionCreator, changeTextInTextareaInMessActionCreator } from "../../../../redux/state";
+import { addNewMessActionCreator, changeTextInTextareaInMessActionCreator } from "../../../../redux/dialogsReducer";
 import classes from "./Messagers.module.css";
 
 const Messagers = (props) => {
