@@ -1,5 +1,5 @@
 import classes from "./ProfileComp.module.css";
-import MyPosts from "./MyPosts/MyPosts";
+import MyPostsContainer from "./MyPosts/MyPostContainer";
 import PersonInformation from "./PersonInformation/PersonInformation";
 
 const ProfileComp = (props) => {
@@ -7,10 +7,9 @@ const ProfileComp = (props) => {
     <main className={classes.main}>
       <div className={classes.headerImg}></div>
       <PersonInformation name="Olga" />
-      <MyPosts
-        posts={props.posts}
-        textInTextArea={props.textInTextArea}
-        dispatch={props.dispatch}
+      <MyPostsContainer
+       store = {props.store}
+       dispatch={props.dispatch}
       />
     </main>
   );

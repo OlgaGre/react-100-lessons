@@ -20,17 +20,15 @@ const App = (props) => {
           <Routes>
             <Route
               path="/profile"
-              element={<ProfileComp posts={props.state.profilePage.postsContentArr}
-              textInTextArea={props.state.profilePage.textInTextArea}
+              element={<ProfileComp 
+              store={props.store}
               dispatch={props.dispatch} />}
             />
             <Route
               path="/messagers/*"
               element={
                 <Dialogs
-                  interlocutorsArr={props.state.dialogsPage.interlocutorsArr}
-                  messagersArr={props.state.dialogsPage.messagersArr}
-                  messageInTextArea={props.state.dialogsPage.messageInTextArea}
+                store={props.store}
                   dispatch={props.dispatch}
                 />
               }
