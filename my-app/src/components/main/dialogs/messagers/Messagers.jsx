@@ -1,5 +1,8 @@
 import React from "react";
-import { addNewMessActionCreator, changeTextInTextareaInMessActionCreator } from "../../../../redux/dialogsReducer";
+import {
+  addNewMessActionCreator,
+  changeTextInTextareaInMessActionCreator,
+} from "../../../../redux/dialogsReducer";
 import classes from "./Messagers.module.css";
 
 const Messagers = (props) => {
@@ -10,15 +13,6 @@ const Messagers = (props) => {
     </div>
   ));
 
-  // let newMessEl = React.createRef();
-  let addNewMess = () => {
-    props.dispatch(addNewMessActionCreator());
-  };
-  let changeTextArea = (event) => {
-    let text = event.target.value;
-    props.dispatch(changeTextInTextareaInMessActionCreator(text))
-  };
-
   return (
     <div>
       <div>{messegers}</div>
@@ -27,9 +21,9 @@ const Messagers = (props) => {
           className={classes.textArea}
           // ref={newMessEl}
           value={props.messageInTextArea}
-          onChange={changeTextArea}
+          onChange={props.changeTextArea}
         ></textarea>
-        <button onClick={addNewMess} className={classes.addBtn}>
+        <button onClick={props.addNewMess} className={classes.addBtn}>
           add
         </button>
       </div>

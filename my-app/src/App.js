@@ -8,7 +8,6 @@ import News from "./components/main/news/News";
 import Music from "./components/main/music/Music";
 import Settings from "./components/main/settings/Settings";
 
-
 const App = (props) => {
   return (
     <BrowserRouter>
@@ -20,17 +19,14 @@ const App = (props) => {
           <Routes>
             <Route
               path="/profile"
-              element={<ProfileComp 
-              store={props.store}
-              dispatch={props.dispatch} />}
+              element={
+                <ProfileComp store={props.store} dispatch={props.dispatch} />
+              }
             />
             <Route
               path="/messagers/*"
               element={
-                <Dialogs
-                store={props.store}
-                  dispatch={props.dispatch}
-                />
+                <Dialogs store={props.store} dispatch={props.dispatch} />
               }
             />
             <Route path="/news" element={<News />} />
