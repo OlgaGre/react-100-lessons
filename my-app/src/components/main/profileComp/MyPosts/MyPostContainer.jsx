@@ -6,21 +6,29 @@ import {
   addNewPostActionCreator,
   changeTextInTexareaInNewPostActionCreator,
 } from "../../../../redux/profileReducer";
+import StoreContext from "../../../../StoreContext";
 const MyPostsContainer = (props) => {
-  let addPost = () => {
-    props.dispatch(addNewPostActionCreator());
-  };
-  let changeTextInState = (event) => {
-    let text = event.target.value;
-    props.dispatch(changeTextInTexareaInNewPostActionCreator(text));
-  };
   return (
-    <MyPosts
-    textInTextArea = {props.store.profilePage.textInTextArea}
-      posts={props.store.profilePage.postsContentArr}
-      addPost={addPost}
-      changeTextInState={changeTextInState}
-    />
+    <StoreContext.Consumer>
+      {(store) => {
+        let state = store.getState();
+        let addPost = () => {
+          store.dispatch(addNewPostActionCreator());
+        };
+        let changeTextInState = (event) => {
+          let text = event.target.value;
+          store.dispatch(changeTextInTexareaInNewPostActionCreator(text));
+        };
+        return (
+          <MyPosts
+            textInTextArea={state.profilePage.textInTextArea}
+            posts={state.profilePage.postsContentArr}
+            addPost={addPost}
+            changeTextInState={changeTextInState}
+          />
+        );
+      }}
+    </StoreContext.Consumer>
   );
 };
 
