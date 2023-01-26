@@ -22,9 +22,5 @@ export let renderTree = (state) => {
   );
 };
 renderTree(store._state);
-store.subscribe(()=>{
-  let state = store.getState()
-  renderTree(state)
-});
 
 reportWebVitals();

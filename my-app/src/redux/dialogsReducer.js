@@ -26,22 +26,27 @@ let initialState = {
         "https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg",
     },
   ],
-  messageInTextArea: "new mess",
+  messageInTextArea: "",
 };
 
 export const dialogsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case addNewMess:
+    case addNewMess: {
       let newObj = {
         mess: state.messageInTextArea,
         sender: true,
       };
-      state.messagersArr.push(newObj);
-      state.messageInTextArea = "";
-      return state;
-    case changeTextInTextareaInMess:
-      state.messageInTextArea = action.messText;
-      return state;
+      let stateCopy = { ...state };
+      stateCopy.messagersArr = [...state.messagersArr];
+      stateCopy.messagersArr.push(newObj);
+      stateCopy.messageInTextArea = "";
+      return stateCopy;
+    }
+    case changeTextInTextareaInMess: {
+      let stateCopy = { ...state };
+      stateCopy.messageInTextArea = action.messText;
+      return stateCopy;
+    }
     default:
       return state;
   }
