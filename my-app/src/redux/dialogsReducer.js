@@ -36,16 +36,14 @@ export const dialogsReducer = (state = initialState, action) => {
         mess: state.messageInTextArea,
         sender: true,
       };
-      let stateCopy = { ...state };
-      stateCopy.messagersArr = [...state.messagersArr];
-      stateCopy.messagersArr.push(newObj);
-      stateCopy.messageInTextArea = "";
-      return stateCopy;
+      return {
+        ...state,
+        messageInTextArea: "",
+        messagersArr: [...state.messagersArr, newObj],
+      };
     }
     case changeTextInTextareaInMess: {
-      let stateCopy = { ...state };
-      stateCopy.messageInTextArea = action.messText;
-      return stateCopy;
+      return { ...state, messageInTextArea: action.messText };
     }
     default:
       return state;

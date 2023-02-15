@@ -2,8 +2,6 @@ import {
   addNewMessActionCreator,
   changeTextInTextareaInMessActionCreator,
 } from "../../../../redux/dialogsReducer";
-
-
 import Messagers from "./Messagers";
 import { connect } from "react-redux";
 // const MessagersContainer = (props) => {
